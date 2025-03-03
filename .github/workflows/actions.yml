@@ -3,10 +3,10 @@ name: Actions 😎
 on:
   push:
     branches:
-      - Build
+      - main
   pull_request:
     branches:
-      - Build
+      - main
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -16,6 +16,12 @@ jobs:
     name: Build project ✨
     runs-on: ubuntu-20.04
     steps:
+      
+      - name: Unity - Activate
+        uses: game-ci/unity-activate@v2.0.0
+        with:
+          unityVersion: 6000.0.40f1
+          
       - name: Pull Unity Docker image in background
         run: |
           docker pull unityci/editor:ubuntu-6000.0.40f1-windows-mono-3 &
@@ -71,6 +77,9 @@ jobs:
         with:
           name: Build
           path: build/StandaloneWindows64
+
+      - name: Unity - Return License
+        uses: game-ci/unity-return-license@v2.0.0
 
   deployPages:
     needs: build
