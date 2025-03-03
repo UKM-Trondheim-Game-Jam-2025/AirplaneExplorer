@@ -16,12 +16,6 @@ jobs:
     name: Build project ✨
     runs-on: ubuntu-20.04
     steps:
-      
-      - name: Unity - Activate
-        uses: game-ci/unity-activate@v2.0.0
-        with:
-          unityVersion: 6000.0.40f1
-          
       - name: Pull Unity Docker image in background
         run: |
           docker pull unityci/editor:ubuntu-6000.0.40f1-windows-mono-3 &
@@ -78,11 +72,10 @@ jobs:
           name: Build
           path: build/StandaloneWindows64
 
-      - name: Unity - Return License
-        uses: game-ci/unity-return-license@v2.0.0
-
   deployPages:
     needs: build
+    permissions:
+      contents: write
     name: Deploy to Itch.io 🚀
     runs-on: ubuntu-latest
     steps:
