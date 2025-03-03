@@ -1,0 +1,105 @@
+name: Actions 😎
+
+on:
+  push:
+    branches:
+      - Build
+  pull_request:
+    branches:
+      - Build
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
+jobs:
+  build:
+    name: Build project ✨
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Pull Unity Docker image in background
+        run: |
+          docker pull unityci/editor:ubuntu-6000.0.40f1-windows-mono-3 &
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # Ensure Library Directory Exists
+      - name: Ensure Library directory exists
+        run: mkdir -p Library
+        
+      # Cache
+      - uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-Temp-Linux-${{ runner.os }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-Temp-Linux-${{ runner.os }}-
+            Library-Temp-Linux-
+            Library-Temp-
+            
+      # Free Disk Space
+      - name: Free up Disk Space
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo rm -rf /var/lib/apt/lists/*
+          sudo rm -rf /tmp/*
+          sudo rm -rf /var/tmp/*
+          sudo apt clean
+          docker rmi $(docker image ls -aq)
+          df -h            
+          
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: StandaloneWindows64
+          unityVersion: 6000.0.40f1
+
+      # Ensure Directory Exists
+      - name: Ensure build directory exists
+        run: mkdir -p build/StandaloneWindows64
+
+      # Output
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Build
+          path: build/StandaloneWindows64
+
+  deployPages:
+    needs: build
+    name: Deploy to Itch.io 🚀
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: Build
+          path: build/StandaloneWindows64
+          
+      - name: Display structure of root files
+        run: ls -R
+        working-directory: build/StandaloneWindows64
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.6.8
+        with:
+          branch: itch-io
+          folder: build/StandaloneWindows64
+
+      - uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: windows
+          ITCH_GAME: UKMJAM2025
+          ITCH_USER: MARZLARS
+          BRANCH: itch-io
+          PACKAGE: build/StandaloneWindows64
