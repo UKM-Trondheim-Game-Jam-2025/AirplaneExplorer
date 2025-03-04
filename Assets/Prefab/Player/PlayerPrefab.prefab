@@ -76,12 +76,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34a829ce3c6f27479827049042d9a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7
+  walkSpeed: 7
+  sprintSpeed: 10
   groundDrag: 5
   jumpForce: 12
   jumpCooldown: 0.25
   airMultiplier: 0.4
+  _canJump: 0
+  crouchSpeed: 3.5
+  crouchYScale: 0.5
   jumpKey: 32
+  sprintKey: 304
+  crouchKey: 99
   playerHeight: 2
   groundLayerMask:
     serializedVersion: 2
@@ -89,6 +95,7 @@ MonoBehaviour:
   _isGrounded: 0
   orientation: {fileID: 5213499853135815507}
   textBoxField: {fileID: 8869732585105198020}
+  state: 0
 --- !u!1 &1962115443947411169
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +171,7 @@ GameObject:
   - component: {fileID: 3454771202576200366}
   - component: {fileID: 8348597759083279496}
   - component: {fileID: 8869732585105198020}
+  - component: {fileID: 6978157575462603152}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -289,6 +297,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6978157575462603152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4440954793000283499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f2017e86f273948873e8483dcba4b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7547534724835070866
 GameObject:
   m_ObjectHideFlags: 0
