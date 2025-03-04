@@ -37,9 +37,7 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         Vector3 movement = orientation.right * horizontal + orientation.forward * vertical;
 
-        rb.AddForce(movement.normalized * movementSpeed * 10f, ForceMode.Force);
-
-        transform.Translate(movement * Time.deltaTime);
+        rb.AddForce(movement.normalized * (movementSpeed * 10f), ForceMode.Force);
 
         if (_isGrounded)
         {
