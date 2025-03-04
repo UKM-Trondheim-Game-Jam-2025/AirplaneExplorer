@@ -144,15 +144,18 @@ public class PlayerController : MonoBehaviour
     {
         // Calculates the Movement Direction
         Vector3 movement = orientation.right * horizontalInput + orientation.forward * verticalInput;
-        
-        // Will allow the Player to move if they're on the ground.
-        if(_isGrounded)
-        rb.AddForce(movement.normalized * movementSpeed * 10f, ForceMode.Force);
 
-        // Will not allow the Player to move if they're in the air.
-        else if (!_isGrounded)
-        rb.AddForce(movement.normalized * movementSpeed * 10f * airMultiplier, ForceMode.Force);
-
+        switch (_isGrounded)
+        {
+            // Will allow the Player to move if they're on the ground.
+            case true:
+                rb.AddForce(movement.normalized * (movementSpeed * 10f), ForceMode.Force);
+                break;
+            // Will not allow the Player to move if they're in the air.
+            case false:
+                rb.AddForce(movement.normalized * (movementSpeed * 10f * airMultiplier), ForceMode.Force);
+                break;
+        }
     }
 
     private void BalanceSpeed()
