@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: "Xi\xF3ng"
-    second: {fileID: 2100000, guid: 850d6a2b6ad769d40a2c95bc60a8ef66, type: 2}
+    second: {fileID: 2100000, guid: a526cbbf7bd5d1e43abbd49bc4fa70cf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
