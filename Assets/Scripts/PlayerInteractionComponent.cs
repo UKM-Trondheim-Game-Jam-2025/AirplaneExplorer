@@ -4,24 +4,25 @@ public class PlayerInteractionComponent : MonoBehaviour, IDataPersistance
 {
     [Header("Player References")]
     [SerializeField] public Transform hand;
-    private Camera playerCamera;
+    [SerializeField] private Camera playerCamera;
     [Header("Interaction Data")]
     [SerializeField] float interactionDistance;
     private IInteractable currentInteractable;
 
     void Start()
     {
-        playerCamera = transform.GetChild(2).GetComponent<Camera>();
+        if (playerCamera == null)
+        {
+            playerCamera = Camera.main;
+        }
     }
 
     void Update()
     {
+        if (!Input.GetKeyDown(KeyCode.E)) return;
+        
         PerformRaycast();
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            HandleInteract();
-        }
+        HandleInteract();
     }
 
     void PerformRaycast()
@@ -57,26 +58,30 @@ public class PlayerInteractionComponent : MonoBehaviour, IDataPersistance
 
     private void OnDrawGizmos()
     {
-        if (playerCamera != null)
-        {
-            Gizmos.color = Color.green;
-            Ray rayc = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            Gizmos.DrawRay(rayc.origin, rayc.direction * interactionDistance);
-        }
+        if (playerCamera == null) return;
+        Gizmos.color = Color.green;
+        Ray rayc = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        Gizmos.DrawRay(rayc.origin, rayc.direction * interactionDistance);
     }
 
     private void HandleInteract()
     {
-        if (currentInteractable != null)
+        switch (currentInteractable)
         {
-            if (currentInteractable is IInteractable interactable)
+            case null:
             {
+                if (hand.childCount > 0)
+                {
+                    hand.GetChild(0).GetComponent<IInteractable>().Interact();
+                }
+                break;
+            }
+            case { } interactable:
                 interactable.Interact();
-            }
-            else
-            {
+                break;
+            default:
                 Debug.Log("Current interactable is not an interactable");
-            }
+                break;
         }
     }
 }

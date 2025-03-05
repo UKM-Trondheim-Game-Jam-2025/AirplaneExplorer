@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
 
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
         playerInventory = player.GetComponent<InventoryComponent>();
     }
 

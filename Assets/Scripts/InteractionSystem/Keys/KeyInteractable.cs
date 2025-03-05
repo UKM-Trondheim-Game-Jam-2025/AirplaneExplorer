@@ -10,13 +10,11 @@ public class KeyInteractable : MonoBehaviour, IInteractable, IDataPersistance
 
     public void Interact()
     {
-        if (!collected)
-        {
-            Debug.Log("collected key");
-            GameManager.instance.playerInventory.AddItem(this);
-            collected = true;
-            this.gameObject.SetActive(false);
-        }
+        if (collected) return;
+        Debug.Log("collected key");
+        GameManager.instance.playerInventory.AddItem(this);
+        collected = true;
+        this.gameObject.SetActive(false);
     }
 
     public void LoadData(GameData data)
