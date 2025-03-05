@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using InputHandling;
 using MovementHandling;
@@ -37,6 +38,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool isGrounded;
 
     [SerializeField] Transform orientation;
+    
+    [Header("Teleporting")]
+    [SerializeField] bool isTeleporting = false;
+    public bool IsTeleporting => isTeleporting;
 
     MovementStateHandler m_StateChain;
     Rigidbody m_Rigidbody;
@@ -173,6 +178,36 @@ public class PlayerController : MonoBehaviour
         // Apply force based on grounded state
         float forceMultiplier = isGrounded ? 10f : 10f * airMultiplier;
         m_Rigidbody.AddForce(movement.normalized * (m_MovementSpeed * forceMultiplier), ForceMode.Force);
+    }
+    
+
+    /// <summary>
+    /// Initiates a teleportation cooldown of 3 seconds
+    /// </summary>
+    public void Teleporting()
+    {
+        if (!isTeleporting)
+        {
+            StartCoroutine(TeleportingCooldown());
+        }
+    }
+
+    /// <summary>
+    /// Coroutine that handles the teleportation cooldown
+    /// </summary>
+    IEnumerator TeleportingCooldown()
+    {
+        isTeleporting = true;
+    
+        if (Debug.isDebugBuild)
+            Debug.Log("Teleporting cooldown started");
+        
+        yield return new WaitForSeconds(3f);
+    
+        isTeleporting = false;
+    
+        if (Debug.isDebugBuild)
+            Debug.Log("Teleporting cooldown ended");
     }
 
 #region Movement Event Methods
