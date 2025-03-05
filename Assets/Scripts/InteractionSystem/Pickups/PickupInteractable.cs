@@ -59,5 +59,6 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         if (!usingPhysics || !_rb) return;
         _rb.useGravity = true;
         _rb.isKinematic = false;
+        _rb.AddForce(-transform.right * 5f, ForceMode.Impulse);
     }
 }
