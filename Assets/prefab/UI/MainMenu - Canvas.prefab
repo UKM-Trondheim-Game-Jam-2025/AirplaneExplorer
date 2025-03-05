@@ -4635,9 +4635,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameScene:
-    asset: {fileID: 0}
-    guid: 00000000000000000000000000000000
-  inputReader: {fileID: 0}
+    asset: {fileID: 102900000, guid: d67af4fe536d5ca44b7ce26afe157bb1, type: 3}
+    guid: d67af4fe536d5ca44b7ce26afe157bb1
+  inputReader: {fileID: 11400000, guid: ba57081db1219f04caf4222da2eabb02, type: 2}
   AllMenus: []
 --- !u!1 &6292625922180998445
 GameObject:
