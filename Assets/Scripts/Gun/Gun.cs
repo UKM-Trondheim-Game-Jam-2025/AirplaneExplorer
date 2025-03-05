@@ -1,14 +1,18 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour, IInteractable
 {
     [Header("Gun Settings")]
-    [SerializeField] private Camera playerCamera;
-    [SerializeField] float fireRange;
-    [SerializeField] Transform muzzlePivot;
-    [SerializeField] GameObject hitEffect, muzzleEffect;
-    [SerializeField] InventoryComponent owner;
-    [SerializeField] int bullets = 3;
+    private Camera playerCamera;
+    [SerializeField] private float fireRange;
+    [SerializeField] private Transform muzzlePivot;
+    [SerializeField] private GameObject hitEffect, muzzleEffect;
+    [SerializeField] public AudioClip equipSound, fireClip;
+    [SerializeField] private InventoryComponent owner;
+    [SerializeField] public int bullets = 3;
+    public Sprite gunSprite;
     [Header("Debugging Logic")]
     [SerializeField] bool firing = false;
 
@@ -30,6 +34,9 @@ public class Gun : MonoBehaviour, IInteractable
 
         owner.hasGun = true;
         owner.gun = this.gameObject;
+        owner.gunUI.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = gunSprite;
+        owner.InitializeGunUI(bullets);
+        owner.gunUI.SetActive(true);
         this.transform.parent = GameManager.instance.player.GetComponent<PlayerInteractionComponent>().hand;
         this.transform.position = transform.parent.position + new Vector3(0f, -.5f, 0f);
         this.transform.localRotation = Quaternion.Euler(transform.forward);
@@ -47,9 +54,11 @@ public class Gun : MonoBehaviour, IInteractable
 
             if (Physics.Raycast(ray, out hit, fireRange))
             {
+                owner.PlaySound(fireClip);
                 Instantiate(hitEffect, hit.point, Quaternion.identity);
                 Instantiate(muzzleEffect, muzzlePivot.position, Quaternion.identity);
                 bullets--;
+                owner.UpdateBulletUI();
                 GameObject hitObject = hit.collider.gameObject;
                 switch (hitObject.tag)
                 {
@@ -70,8 +79,15 @@ public class Gun : MonoBehaviour, IInteractable
         }
         else
         {
-            owner.hasGun = false;
-            Destroy(this.gameObject);
+           DestroyGun();
         }
+    }
+
+    void DestroyGun()
+    {
+        owner.hasGun = false;
+        owner.ToggleGun();
+        Destroy(this.gameObject);
+        owner.gunUI.gameObject.SetActive(false);
     }
 }
