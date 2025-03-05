@@ -12,6 +12,8 @@ public class PickupInteractable : MonoBehaviour, IInteractable
     {
         _rb = GetComponent<Rigidbody>();
         _playerInteractionComponent = GameManager.instance.player.GetComponent<PlayerInteractionComponent>();
+        _rb.useGravity = usingPhysics;
+        _rb.isKinematic = !usingPhysics;
     }
 
     public void Interact()
@@ -48,7 +50,7 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         transform.parent = _playerInteractionComponent.hand;
         transform.localPosition = Vector3.zero;
         Vector3 offsetRotation = new Vector3(0, 90, 0);
-        transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles + offsetRotation);
+        transform.localRotation = Quaternion.Euler(transform.forward + offsetRotation);
     }
 
     private void Drop()

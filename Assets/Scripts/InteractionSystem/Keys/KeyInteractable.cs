@@ -6,7 +6,14 @@ public class KeyInteractable : MonoBehaviour, IInteractable, IDataPersistance
     public int KeyID;
     public Sprite keySprite;
     public Color keyColor = Color.white;
-    public bool collected;
+    [SerializeField] private bool collected;
+    [SerializeField] private Renderer keyRenderer;
+
+    private void Start()
+    {
+        keyRenderer = GetComponent<Renderer>();
+        keyRenderer.material.color = keyColor;
+    }
 
     public void Interact()
     {

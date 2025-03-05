@@ -57,6 +57,7 @@ public class UIManager : MonoBehaviour
                 if (keyComponent != null)
                 {
                     image.sprite = keyComponent.keySprite;
+                    image.color = keyComponent.keyColor;
                 }
             }
             RectTransform rectTransform = keyUIElement.GetComponent<RectTransform>();
@@ -64,7 +65,7 @@ public class UIManager : MonoBehaviour
             {
                 rectTransform.anchoredPosition = new Vector2(xPos, 0);
             }
-            xPos -= 50;
+            xPos -= 80;
         }
     }
 }
