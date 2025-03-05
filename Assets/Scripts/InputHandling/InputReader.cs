@@ -12,8 +12,7 @@ namespace InputHandling
         Vector2 moveInput { get; }
         void EnablePlayerActions();
         void DisablePlayerActions();
-        bool isPaused { get; }
-
+        bool IsPaused { get; }
         void RequestUIMode();
         void RequestPlayerMode();
         event Action<bool> PauseEvent;
@@ -23,12 +22,14 @@ namespace InputHandling
     [CreateAssetMenu(fileName = "New Input Reader", menuName = "Input/Input Reader")]
     public class InputReader : ScriptableObject, IPlayerActions, IUIActions, IInputReader
     {
-        public Vector2 moveInput => _inputActions.Player.Move.ReadValue<Vector2>();
-        public bool isPaused { get; private set; }
+        public Vector2 moveInput => m_InputActions.Player.Move.ReadValue<Vector2>();
+        public bool IsPaused { get; private set; }
         
         #region Player Action Events
         public event Action<Vector2> MoveEvent = delegate { };
         public event Action<bool> JumpEvent = delegate { };
+        public event Action<bool> SprintEvent = delegate { }; 
+        public event Action<bool> CrouchEvent = delegate { }; 
         public event Action<bool> ResetEvent = delegate { };
         public event Action<bool> PauseEvent = delegate { };
 
@@ -39,8 +40,8 @@ namespace InputHandling
         public event Action<bool> GoBackEvent = delegate { };
         #endregion
         
-        InputSystem_Actions _inputActions;
-        PlayerInput _assignedPlayerInput;
+        InputSystem_Actions m_InputActions;
+        PlayerInput m_AssignedPlayerInput;
         //-----------------------------------------------------------------------------
 
         /// <summary>
@@ -49,74 +50,74 @@ namespace InputHandling
         /// <param name="playerInput">The PlayerInput component to associate with this InputReader</param>
         public void AssignPlayerInput(PlayerInput playerInput)
         {
-            _assignedPlayerInput = playerInput;
+            m_AssignedPlayerInput = playerInput;
             
             // If we already had input actions, unsubscribe first
-            if (_inputActions != null)
+            if (m_InputActions != null)
             {
-                _inputActions.Player.Disable();
-                _inputActions.UI.Disable();
+                m_InputActions.Player.Disable();
+                m_InputActions.UI.Disable();
             }
             
             // Create new input actions for this specific player
-            _inputActions = new InputSystem_Actions();
-            _inputActions.Player.SetCallbacks(this);
-            _inputActions.UI.SetCallbacks(this);
+            m_InputActions = new InputSystem_Actions();
+            m_InputActions.Player.SetCallbacks(this);
+            m_InputActions.UI.SetCallbacks(this);
             
             // Set the devices to match the PlayerInput component
-            if (playerInput != null && playerInput.devices.Count > 0)
+            if (playerInput is not null && playerInput.devices.Count > 0)
             {
-                _inputActions.devices = playerInput.devices;
+                m_InputActions.devices = playerInput.devices;
             }
         }
         
         public void EnablePlayerActions()
         {
-            if (_inputActions is null)
+            if (m_InputActions is null)
             {
-                _inputActions = new InputSystem_Actions();
-                _inputActions.Player.SetCallbacks(this);
-                _inputActions.UI.SetCallbacks(this);
+                m_InputActions = new InputSystem_Actions();
+                m_InputActions.Player.SetCallbacks(this);
+                m_InputActions.UI.SetCallbacks(this);
             }
 
-            _inputActions.Player.Enable();
+            m_InputActions.Player.Enable();
         }
 
         public void DisablePlayerActions()
         {
-            if (_inputActions is null)
+            if (m_InputActions is null)
                 return;
-            _inputActions.Player.Disable();
-            _inputActions.UI.Disable();
-            _inputActions = null;
+            m_InputActions.Player.Disable();
+            m_InputActions.UI.Disable();
+            m_InputActions = null;
         }
 
         // Public methods for external components to request input mode changes
         public void RequestUIMode()
         {
-            if (!isPaused)
+            if (!IsPaused)
                 SwitchToUIControls();
         }
 
         public void RequestPlayerMode()
         {
-            if (isPaused)
+            if (IsPaused)
                 SwitchToPlayerControls();
         }
 
         void SwitchToUIControls()
         {
-            isPaused = true;
-            _inputActions.Player.Disable();
-            _inputActions.UI.Enable();
+            IsPaused = true;
+            m_InputActions.Player.Disable();
+            m_InputActions.UI.Enable();
             PauseEvent?.Invoke(true);
         }
 
         void SwitchToPlayerControls()
         {
-            isPaused = false;
-            _inputActions.Player.Enable();
-            _inputActions.UI.Disable();
+            IsPaused = false;
+            m_InputActions.Player.Enable();
+            m_InputActions.UI.Disable();
             PauseEvent?.Invoke(false);
         }
 
@@ -125,16 +126,16 @@ namespace InputHandling
         //*************IMPLEMENTED METHODS*************
         public void OnMove(InputAction.CallbackContext context)
         {
-            //MoveEvent.Invoke(context.ReadValue<Vector2>());
+            MoveEvent.Invoke(context.ReadValue<Vector2>());
         }
 
         public void OnCrouch(InputAction.CallbackContext context)
         {
-            throw new NotImplementedException();
+            CrouchEvent?.Invoke(context.ReadValueAsButton());
         }
         public void OnJump(InputAction.CallbackContext context)
         {
-            //JumpEvent?.Invoke(context.action.WasPressedThisFrame());
+            JumpEvent?.Invoke(context.action.WasPressedThisFrame());
         }
         public void OnPrevious(InputAction.CallbackContext context)
         {
@@ -152,20 +153,20 @@ namespace InputHandling
 
         public void OnPause(InputAction.CallbackContext context)
         {
-            if (!isPaused)
+            if (!IsPaused)
                 SwitchToUIControls();
             else
                 SwitchToPlayerControls();
         }
 
+        public void OnSprint(InputAction.CallbackContext context)
+        {
+            SprintEvent?.Invoke(context.ReadValueAsButton());
+        }
+
         //********************************************
 
         //*************NOT IMPLEMENTED METHODS*************
-        public void OnSprint(InputAction.CallbackContext context)
-        {
-            //noop
-        }
-
         public void OnLeap(InputAction.CallbackContext context)
         {
             //noop
