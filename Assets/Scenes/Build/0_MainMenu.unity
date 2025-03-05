@@ -544,18 +544,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3452990652153165917, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
-      propertyPath: m_Name
-      value: Menu - Panel
-      objectReference: {fileID: 0}
     - target: {fileID: 6230017054585615406, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
       propertyPath: m_Name
       value: MainMenu - Canvas
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6267823799723668352, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 6551076127703163956, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
