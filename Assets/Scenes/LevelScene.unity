@@ -31210,6 +31210,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1605722215595441610, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: ba57081db1219f04caf4222da2eabb02, type: 2}
+    - target: {fileID: 1605722215595441610, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
+      propertyPath: isSprinting
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1962115443947411169, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
       propertyPath: m_Name
       value: PlayerPrefab
