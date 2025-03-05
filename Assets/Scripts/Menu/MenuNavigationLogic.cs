@@ -123,7 +123,7 @@ public class MenuNavigationLogic : MonoBehaviour
         if (Mathf.Abs(direction.x) < 0.3f && Mathf.Abs(direction.y) < 0.3f)
             return;
 
-        if (EventSystem.current && Selectables.Count > 0 && EventSystem.current.currentSelectedGameObject == null)
+        if (EventSystem.current && Selectables.Count > 0 && EventSystem.current.currentSelectedGameObject is null)
         {
             // If nothing is selected, select the first element
             EventSystem.current.SetSelectedGameObject(firstSelected ? firstSelected.gameObject : Selectables[0].gameObject);
