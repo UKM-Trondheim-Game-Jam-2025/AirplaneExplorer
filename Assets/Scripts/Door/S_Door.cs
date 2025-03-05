@@ -3,10 +3,12 @@ using UnityEngine;
 public class S_Door : MonoBehaviour, IInteractable
 {
     private static readonly int Open = Animator.StringToHash("Open");
+    private static readonly int IsLocked = Animator.StringToHash("IsLocked");
 
     [Header("Door References")]
     [SerializeField] private Animator doorAnimator;
     [SerializeField] private Renderer lockRender;
+    [SerializeField] private GameObject lockObject;
     [Header("Door Settings")]
     [SerializeField] private bool isLocked = false;
     [SerializeField] private bool defaultOpen = false;
@@ -16,8 +18,12 @@ public class S_Door : MonoBehaviour, IInteractable
 
     private void Start()
     {
+        doorAnimator.SetBool(IsLocked, isLocked);
         doorAnimator.SetBool(Open, defaultOpen);
-        lockRender = GetComponent<Renderer>();
+        if (lockRender == null)
+        {
+            lockRender = lockObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>();
+        }
         if (lockRender != null)
         {
             lockRender.material.color = lockColor;
@@ -33,6 +39,7 @@ public class S_Door : MonoBehaviour, IInteractable
             if (HasKey())
             {
                 UnlockDoor();
+                doorAnimator.SetBool(IsLocked, false);
             }
             else
             {

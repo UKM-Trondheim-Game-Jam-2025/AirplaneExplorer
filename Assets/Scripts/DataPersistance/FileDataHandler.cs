@@ -21,31 +21,29 @@ public class FileDataHandler
         string fullPath = Path.Combine(dataDirectoryPath, dataFileName);
         GameData loadedData = null;
         Debug.LogError("created directory: " + fullPath + "\n" + "and also through Path.GetDirectoryName: " + Path.GetDirectoryName(fullPath));
-        if (File.Exists(fullPath))
+        if (!File.Exists(fullPath)) return null;
+        try
         {
-            try
+            string dataToLoad = "";
+            using (FileStream stream = new FileStream(fullPath, FileMode.Open))
             {
-                string dataToLoad = "";
-                using (FileStream stream = new FileStream(fullPath, FileMode.Open))
+                using (StreamReader reader = new StreamReader(stream))
                 {
-                    using (StreamReader reader = new StreamReader(stream))
-                    {
-                        dataToLoad = reader.ReadToEnd();
-                    }
+                    dataToLoad = reader.ReadToEnd();
                 }
-
-                if (useEncryptiom)
-                {
-                    dataToLoad = EncryptDecrypt(dataToLoad);
-                }
-
-                loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
-
             }
-            catch (Exception e)
+
+            if (useEncryptiom)
             {
-                Debug.LogError("exception failed while trying to load data from file: " + fullPath + "\n" + e);
+                dataToLoad = EncryptDecrypt(dataToLoad);
             }
+
+            loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
+
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("exception failed while trying to load data from file: " + fullPath + "\n" + e);
         }
         return loadedData;
     }
@@ -55,7 +53,7 @@ public class FileDataHandler
         string fullPath = Path.Combine(dataDirectoryPath, dataFileName);
         try
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+            Directory.CreateDirectory(Path.GetDirectoryName(fullPath) ?? string.Empty);
             string dataToStore = JsonUtility.ToJson(savingData, true);
 
             if (useEncryptiom)
