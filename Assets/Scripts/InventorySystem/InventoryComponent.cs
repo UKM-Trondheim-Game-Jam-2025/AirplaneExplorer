@@ -15,7 +15,7 @@ public class InventoryComponent : MonoBehaviour
     {
         return heldKeys;
     }
-
+    
     public void AddItem(KeyInteractable inItem)
     {
         if (heldKeys.Contains(inItem))

@@ -15,11 +15,13 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Found more than one GameManager in the scene.");
         }
         instance = this;
+
+        player = GameObject.Find("Player");
+        playerInventory = player.GetComponent<InventoryComponent>();
     }
 
     private void Start()
     {
-        player = GameObject.Find("Player");
-        playerInventory = player.GetComponent<InventoryComponent>();
+        
     }
 }

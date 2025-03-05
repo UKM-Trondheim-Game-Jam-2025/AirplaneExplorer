@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,8 +10,6 @@ public class UIManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform keyHUDField;
     [SerializeField] private GameObject keyUIPrefab;
-
-
 
     private void Awake()
     {
@@ -31,8 +30,9 @@ public class UIManager : MonoBehaviour
         GameManager.instance.playerInventory.OnInventoryUpdated -= UpdateUI;
     }
 
-    private void UpdateUI(List<KeyInteractable> heldKeys)
+    public void UpdateUI(List<KeyInteractable> heldKeys)
     {
+        Debug.Log("Called UpdateUI with this: " + heldKeys.Count);
         InitializeKeysUI(heldKeys);
     }
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerInteractionComponent : MonoBehaviour
+public class PlayerInteractionComponent : MonoBehaviour, IDataPersistance
 {
     [Header("Player References")]
     [SerializeField] public Transform hand;
@@ -43,6 +43,16 @@ public class PlayerInteractionComponent : MonoBehaviour
         {
             currentInteractable = null;
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.playerPosition = this.transform.position;
     }
 
     private void OnDrawGizmos()
