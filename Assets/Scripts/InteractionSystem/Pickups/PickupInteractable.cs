@@ -5,8 +5,9 @@ public class PickupInteractable : MonoBehaviour, IInteractable
 {
     [Header("Pickup Settings")]
     [SerializeField] private bool usingPhysics = false;
-    private Rigidbody _rb;
+    [SerializeField] private bool isTheLuggage = false;
     private PlayerInteractionComponent _playerInteractionComponent;
+    private Rigidbody _rb;
 
     private void Start()
     {
@@ -32,25 +33,32 @@ public class PickupInteractable : MonoBehaviour, IInteractable
 
     private void PickUp()
     {
-        if (_playerInteractionComponent.hand.childCount > 0)
+        if (!isTheLuggage)
         {
-            Transform prevHeldItem = _playerInteractionComponent.hand.GetChild(0);
-            if (usingPhysics)
+            if (_playerInteractionComponent.hand.childCount > 0)
             {
-                prevHeldItem.GetComponent<Rigidbody>().isKinematic = false;
-                prevHeldItem.GetComponent<Rigidbody>().useGravity = true;
+                Transform prevHeldItem = _playerInteractionComponent.hand.GetChild(0);
+                if (usingPhysics)
+                {
+                    prevHeldItem.GetComponent<Rigidbody>().isKinematic = false;
+                    prevHeldItem.GetComponent<Rigidbody>().useGravity = true;
+                }
+                prevHeldItem.parent = null;
             }
-            prevHeldItem.parent = null;
+            if (usingPhysics && _rb)
+            {
+                _rb.useGravity = false;
+                _rb.isKinematic = true;
+            }
+            transform.parent = _playerInteractionComponent.hand;
+            transform.localPosition = Vector3.zero;
+            Vector3 offsetRotation = new Vector3(0, 90, 0);
+            transform.localRotation = Quaternion.Euler(transform.forward + offsetRotation);
         }
-        if (usingPhysics && _rb)
+        else
         {
-            _rb.useGravity = false;
-            _rb.isKinematic = true;
+            WinTheGame();
         }
-        transform.parent = _playerInteractionComponent.hand;
-        transform.localPosition = Vector3.zero;
-        Vector3 offsetRotation = new Vector3(0, 90, 0);
-        transform.localRotation = Quaternion.Euler(transform.forward + offsetRotation);
     }
 
     private void Drop()
@@ -60,5 +68,11 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         _rb.useGravity = true;
         _rb.isKinematic = false;
         _rb.AddForce(-transform.right * 5f, ForceMode.Impulse);
+    }
+
+    private void WinTheGame()
+    {
+        Debug.Log("Won the game");
+        // switch Scene or simply play winning cutscene
     }
 }

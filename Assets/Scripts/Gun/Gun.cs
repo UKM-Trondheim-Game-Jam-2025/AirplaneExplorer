@@ -55,8 +55,8 @@ public class Gun : MonoBehaviour, IInteractable
             if (Physics.Raycast(ray, out hit, fireRange))
             {
                 owner.PlaySound(fireClip);
-                Instantiate(hitEffect, hit.point, Quaternion.identity);
-                Instantiate(muzzleEffect, muzzlePivot.position, Quaternion.identity);
+                Instantiate(hitEffect, hit.point, Quaternion.Euler(hit.normal));
+                Instantiate(muzzleEffect, muzzlePivot.position, Quaternion.Euler(Vector3.forward));
                 bullets--;
                 owner.UpdateBulletUI();
                 GameObject hitObject = hit.collider.gameObject;
@@ -67,9 +67,9 @@ public class Gun : MonoBehaviour, IInteractable
                         Debug.Log("Hit: " + hitObject.name);
                         break;
                     case "Window":
-                        // lose/end game
-                        break;
-                    case "":
+                        Debug.Log("you lose");
+                        GameManager.instance.hasLost = true;
+                        GameManager.instance.SwitchSceneToLoseScene();
                         break;
                     default:
                         break;

@@ -77,6 +77,12 @@ public class DataPersistanceManager : MonoBehaviour
             NewGame();
         }
 
+        if (gameData.gameLost)
+        {
+            NewGame();
+            return;
+        }
+
         if (gameData == null)
         {
             Debug.Log("Initializing to default values");

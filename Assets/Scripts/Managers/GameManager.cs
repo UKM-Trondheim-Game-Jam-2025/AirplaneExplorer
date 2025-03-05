@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("Player")]
     public InventoryComponent playerInventory;
     public GameObject player;
+
+    [Header("Lose condition")]
+    public bool hasLost;
 
     private void Awake()
     {
@@ -20,8 +24,14 @@ public class GameManager : MonoBehaviour
         playerInventory = player.GetComponent<InventoryComponent>();
     }
 
-    private void Start()
+    public void SwitchSceneToLoseScene()
     {
-        
+        SceneManager.LoadScene("LoseScene");
+    }
+
+    public void RestartGame()
+    {
+        //DataPersistanceManager.Instance.NewGame();
+        SceneManager.LoadScene("0_MainMenu");
     }
 }
