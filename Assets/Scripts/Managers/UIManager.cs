@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour
             {
                 rectTransform.anchoredPosition = new Vector2(xPos, 0);
             }
-            xPos -= 80;
+            xPos -= 70;
         }
     }
 }

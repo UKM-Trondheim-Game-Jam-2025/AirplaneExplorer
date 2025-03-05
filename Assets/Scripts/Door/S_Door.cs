@@ -32,7 +32,6 @@ public class S_Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("Interacted with door");
         if (isLocked)
         {
             Debug.Log("The door is locked!");
@@ -74,5 +73,12 @@ public class S_Door : MonoBehaviour, IInteractable
                 break;
             }
         }
+    }
+
+    public void OverrideLock()
+    {
+        isLocked = false;
+        doorAnimator.SetBool(IsLocked, isLocked);
+        doorAnimator.SetBool(Open, !doorAnimator.GetBool(Open));
     }
 }
