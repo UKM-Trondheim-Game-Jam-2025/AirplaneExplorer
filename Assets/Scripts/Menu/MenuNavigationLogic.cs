@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 //https://youtu.be/0EsrYNAAEEY?si=IgVJhcgMx_TUdHk8
-public class MenuSelectionLogic : MonoBehaviour
+public class MenuNavigationLogic : MonoBehaviour
 {
     #region Serialized Fields
     [Header("References")]

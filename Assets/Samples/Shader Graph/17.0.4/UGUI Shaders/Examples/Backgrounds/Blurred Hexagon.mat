@@ -72,7 +72,7 @@ Material:
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
-    - _Background_Saturation: 1
+    - _Background_Saturation: 0
     - _BlendMode: 0
     - _Blur: 0.06548954
     - _BlurCycles: 3
@@ -144,6 +144,6 @@ Material:
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0.7983047, g: 0.8255775, b: 0.87695575, a: 1}
+    - _Tint: {r: 0, g: 0.77796566, b: 0.87695575, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

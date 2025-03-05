@@ -16,7 +16,6 @@ namespace Menu
         [Header("Input")]
         [SerializeField] InputReader inputReader;
 
-        //Drags = the different menus we have
         public State.MenuState[] AllMenus;
 
         //The states we can choose from
