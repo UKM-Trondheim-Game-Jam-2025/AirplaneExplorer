@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PickupInteractable : MonoBehaviour, IInteractable
@@ -15,6 +14,9 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         _playerInteractionComponent = GameManager.instance.player.GetComponent<PlayerInteractionComponent>();
         _rb.useGravity = usingPhysics;
         _rb.isKinematic = !usingPhysics;
+        Renderer rend = GetComponent<Renderer>();
+        Color color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        rend.material.color = color;
     }
 
     public void Interact()
