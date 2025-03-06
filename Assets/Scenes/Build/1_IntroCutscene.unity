@@ -3122,8 +3122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene:
-    asset: {fileID: 102900000, guid: 27bcd87eb9bf0664cbf31076663f1ecd, type: 3}
-    guid: 27bcd87eb9bf0664cbf31076663f1ecd
+    asset: {fileID: 102900000, guid: fffbaa4408317814c9153be0470ca61f, type: 3}
+    guid: fffbaa4408317814c9153be0470ca61f
 --- !u!114 &438903833
 MonoBehaviour:
   m_ObjectHideFlags: 0
