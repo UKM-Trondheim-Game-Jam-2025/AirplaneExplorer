@@ -14699,6 +14699,8 @@ PlayableDirector:
     value: {fileID: 1247022693}
   - key: {fileID: -6900250320242400588, guid: bca6c9b226631054e99b08c8c92523b6, type: 2}
     value: {fileID: 418492706}
+  - key: {fileID: -1317015518207130304, guid: bca6c9b226631054e99b08c8c92523b6, type: 2}
+    value: {fileID: 2111053814}
   m_ExposedReferences:
     m_References:
     - 1955c769f09cb4e47b8bc6b6b0023a7b: {fileID: 418492705}
@@ -39618,8 +39620,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703516748}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.003934445, y: 0.8989064, z: -0.008073747, w: 0.43804866}
-  m_LocalPosition: {x: -27.64, y: 1.26, z: 42.43}
+  m_LocalRotation: {x: 0.10751633, y: -0.006894624, z: 0.0021144175, w: 0.99417716}
+  m_LocalPosition: {x: -252.049, y: 2.684, z: -20.638}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48267,6 +48269,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030985644, guid: abc00000000000268288404620905852, type: 3}
   m_PrefabInstance: {fileID: 2110891630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2111053811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2111053813}
+  - component: {fileID: 2111053812}
+  - component: {fileID: 2111053814}
+  m_Layer: 0
+  m_Name: SwapSceneSignal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2111053812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111053811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e69eb7c3798495408fbca22a4c3b2fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene:
+    asset: {fileID: 102900000, guid: 044223f1a239c0f4fbc92b0f4d5a5190, type: 3}
+    guid: 044223f1a239c0f4fbc92b0f4d5a5190
+--- !u!4 &2111053813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111053811}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111053814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111053811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 28448c6987c1ee14cb1dc4e08e7ac1e4, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2111053812}
+          m_TargetAssemblyTypeName: TimelineSwapScene, Assembly-CSharp
+          m_MethodName: SwapScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &2113882263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49490,3 +49570,4 @@ SceneRoots:
   - {fileID: 1995556582}
   - {fileID: 634562258}
   - {fileID: 561579947}
+  - {fileID: 2111053813}
