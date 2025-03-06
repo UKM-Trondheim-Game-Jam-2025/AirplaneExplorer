@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class S_PortalCamera : MonoBehaviour
@@ -9,6 +10,12 @@ public class S_PortalCamera : MonoBehaviour
     [SerializeField] private Transform linkedPortal;
     [Header("Important Setting")]
     [SerializeField] private float offset;
+
+    private void Start()
+    {
+        if (playerCamera != null) return;
+        if (Camera.main != null) playerCamera = Camera.main.transform;
+    }
 
     private void LateUpdate()
     {
