@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Build/2_SleepingCutscene.unity
     guid: fffbaa4408317814c9153be0470ca61f
   - enabled: 1
+    path: Assets/Scenes/Build/3_EndCutscene.unity
+    guid: f89ebd9d1b5e76b458c3ef9867f1164d
+  - enabled: 1
     path: Assets/Scenes/PlaydemoLevelScene.unity
     guid: 044223f1a239c0f4fbc92b0f4d5a5190
   - enabled: 1
