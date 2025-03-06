@@ -1113,7 +1113,6 @@ GameObject:
   m_Component:
   - component: {fileID: 172705357}
   - component: {fileID: 172705356}
-  - component: {fileID: 172705358}
   m_Layer: 0
   m_Name: CinematicSequence
   m_TagString: Untagged
@@ -1157,21 +1156,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &172705358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172705355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e69eb7c3798495408fbca22a4c3b2fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene:
-    asset: {fileID: 0}
-    guid: 00000000000000000000000000000000
 --- !u!1001 &180170218
 PrefabInstance:
   m_ObjectHideFlags: 0
