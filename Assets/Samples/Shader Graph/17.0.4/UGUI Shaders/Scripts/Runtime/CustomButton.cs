@@ -23,12 +23,12 @@ namespace Unity.UI.Shaders.Sample
         public UnityEvent onClick;
         public UnityEvent<int> onStateChanged;
 
-        private static readonly string _statePropertyName = "_State";
-        
-        private Material _material;
+        static readonly string _statePropertyName = "_State";
 
-        private int? _statePropertyId;
-        private int StatePropertyId
+        Material _material;
+
+        int? _statePropertyId;
+        int StatePropertyId
         {
             get
             {
@@ -38,12 +38,12 @@ namespace Unity.UI.Shaders.Sample
             }
         }
 
-        private Graphic _graphic;
+        Graphic _graphic;
         public Graphic Graphic
         {
             get
             {
-                if (_graphic == null)
+                if (_graphic is null)
                     _graphic = GetComponent<Graphic>();
                 return _graphic;
             }
@@ -54,7 +54,7 @@ namespace Unity.UI.Shaders.Sample
 
         protected internal void AssignDefaultMaterial()
         {
-            if (defaultMaterial != null)
+            if (defaultMaterial is not null)
                 Graphic.material = defaultMaterial;
         }
 

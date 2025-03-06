@@ -38,9 +38,9 @@ namespace Menu
         #region InputReader Event Handler
 
         // Handle the GoBackEvent from InputReader
-        void HandleGoBackEvent(bool value)
+        void HandleGoBackEvent(bool activated)
         {
-            if (value)
+            if (activated)
                 //Jump back one menu step when we press escape or a back button
                 m_ActiveState?.SwitchBack();
         }

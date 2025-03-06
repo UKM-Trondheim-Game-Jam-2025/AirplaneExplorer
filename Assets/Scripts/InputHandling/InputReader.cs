@@ -9,7 +9,7 @@ namespace InputHandling
 
     public interface IInputReader
     {
-        Vector2 moveInput { get; }
+        Vector2 MoveInput { get; }
         void EnablePlayerActions();
         void DisablePlayerActions();
         bool IsPaused { get; }
@@ -22,7 +22,7 @@ namespace InputHandling
     [CreateAssetMenu(fileName = "New Input Reader", menuName = "Input/Input Reader")]
     public class InputReader : ScriptableObject, IPlayerActions, IUIActions, IInputReader
     {
-        public Vector2 moveInput => m_InputActions.Player.Move.ReadValue<Vector2>();
+        public Vector2 MoveInput => m_InputActions.Player.Move.ReadValue<Vector2>();
         public bool IsPaused { get; private set; }
         
         #region Player Action Events
@@ -53,7 +53,7 @@ namespace InputHandling
             m_AssignedPlayerInput = playerInput;
             
             // If we already had input actions, unsubscribe first
-            if (m_InputActions != null)
+            if (m_InputActions is not null)
             {
                 m_InputActions.Player.Disable();
                 m_InputActions.UI.Disable();
