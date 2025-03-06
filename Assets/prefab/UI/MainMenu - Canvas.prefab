@@ -3621,7 +3621,7 @@ MonoBehaviour:
     guid: 458207c7d98731a4f98dbda1dc93eb6a
   inputReader: {fileID: 11400000, guid: ba57081db1219f04caf4222da2eabb02, type: 2}
   AllMenus:
-  - {fileID: 0}
+  - {fileID: 7984257174098251293}
 --- !u!1 &6292625922180998445
 GameObject:
   m_ObjectHideFlags: 0

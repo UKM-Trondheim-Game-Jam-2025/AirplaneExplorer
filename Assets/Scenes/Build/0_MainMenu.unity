@@ -63824,6 +63824,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6194818340183973325, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
+      propertyPath: soundEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194818340183973325, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
+      propertyPath: soundEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8300000, guid: 120d834796037bf43802cdec7efa7096, type: 3}
+    - target: {fileID: 6194818340183973325, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
+      propertyPath: soundEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194818340183973325, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
+      propertyPath: soundEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194818340183973325, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
+      propertyPath: soundEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6230017054585615406, guid: a861a9283209f714f8bbd8011e0362a9, type: 3}
       propertyPath: m_Name
       value: MainMenu - Canvas
