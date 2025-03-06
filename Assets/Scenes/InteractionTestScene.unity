@@ -1554,10 +1554,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2122214757}
     - target: {fileID: 7197322954297870731, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
-      propertyPath: bulletUI
-      value: 
-      objectReference: {fileID: 6635243687915176339, guid: 5af247b43e39adc40bbe20a1e1a43266, type: 3}
-    - target: {fileID: 7197322954297870731, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
       propertyPath: inventoryAudio
       value: 
       objectReference: {fileID: 1611400595}
