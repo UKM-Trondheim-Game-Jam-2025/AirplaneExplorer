@@ -16,7 +16,7 @@ TagManager:
   - groundLayerMask
   - ceilingLayerMask
   - 
-  - 
+  - RoomCheckTrigger
   - Player
   - 
   - 

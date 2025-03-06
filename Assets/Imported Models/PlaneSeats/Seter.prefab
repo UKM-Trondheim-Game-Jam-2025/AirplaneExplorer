@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3565706249203018433}
   - component: {fileID: 8757365379311223325}
   - component: {fileID: 1335225470920816514}
-  - component: {fileID: 8283404826030088312}
+  - component: {fileID: 4523608601363180642}
   m_Layer: 0
   m_Name: Group_032
   m_TagString: Untagged
@@ -53,7 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -87,7 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8283404826030088312
+--- !u!64 &4523608601363180642
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8263099018566364764}
   - component: {fileID: 4821862352768467298}
   - component: {fileID: 4791149226540441743}
-  - component: {fileID: 3428319432666080937}
+  - component: {fileID: 951628330707059874}
   m_Layer: 0
   m_Name: Group_017
   m_TagString: Untagged
@@ -162,7 +162,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -196,7 +196,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3428319432666080937
+--- !u!64 &951628330707059874
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 4273550759598950910}
   - component: {fileID: 2436578830809478233}
   - component: {fileID: 3485429885431336858}
-  - component: {fileID: 6557227076287076204}
+  - component: {fileID: 7699797778268125309}
   m_Layer: 0
   m_Name: Group_007
   m_TagString: Untagged
@@ -271,7 +271,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -305,7 +305,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6557227076287076204
+--- !u!64 &7699797778268125309
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 8311494529417705092}
   - component: {fileID: 7450486149519758858}
   - component: {fileID: 5198521481048614202}
-  - component: {fileID: 2793847373235054735}
+  - component: {fileID: 3753844504131985584}
   m_Layer: 0
   m_Name: Group_033
   m_TagString: Untagged
@@ -380,7 +380,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -414,7 +414,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2793847373235054735
+--- !u!64 &3753844504131985584
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 9053743568005810769}
   - component: {fileID: 7473280185614219930}
   - component: {fileID: 6586127360236578957}
-  - component: {fileID: 1774396126361896286}
+  - component: {fileID: 6875433549820266588}
   m_Layer: 0
   m_Name: Group_030
   m_TagString: Untagged
@@ -489,7 +489,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -523,7 +523,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1774396126361896286
+--- !u!64 &6875433549820266588
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 7932162437753358455}
   - component: {fileID: 2802687699562250747}
   - component: {fileID: 6939673358632989467}
-  - component: {fileID: 6673191439339690298}
+  - component: {fileID: 4265999841055810891}
   m_Layer: 0
   m_Name: Group_029
   m_TagString: Untagged
@@ -598,7 +598,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -633,7 +633,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6673191439339690298
+--- !u!64 &4265999841055810891
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 5642962134467316760}
   - component: {fileID: 858475462858780657}
   - component: {fileID: 6797922195335918978}
-  - component: {fileID: 6560865344007389602}
+  - component: {fileID: 2147240383940549583}
   m_Layer: 0
   m_Name: Group_019
   m_TagString: Untagged
@@ -708,7 +708,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -742,7 +742,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6560865344007389602
+--- !u!64 &2147240383940549583
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 9097454978870033272}
   - component: {fileID: 5964857012239281832}
   - component: {fileID: 5530101366352791508}
-  - component: {fileID: 781802507757843419}
+  - component: {fileID: 2452255269029208675}
   m_Layer: 0
   m_Name: Group_022
   m_TagString: Untagged
@@ -817,7 +817,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -851,7 +851,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &781802507757843419
+--- !u!64 &2452255269029208675
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 7747131498225744192}
   - component: {fileID: 8326036054894466928}
   - component: {fileID: 42540122923601284}
-  - component: {fileID: 8310525166283022109}
+  - component: {fileID: 3225469153106913852}
   m_Layer: 0
   m_Name: "Clockwise\xAE_003"
   m_TagString: Untagged
@@ -926,7 +926,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -960,7 +960,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8310525166283022109
+--- !u!64 &3225469153106913852
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 3674331546739425987}
   - component: {fileID: 4698587002718893086}
   - component: {fileID: 4532408059704817114}
-  - component: {fileID: 3361731684064827668}
+  - component: {fileID: 5204115812593120909}
   m_Layer: 0
   m_Name: Group_027
   m_TagString: Untagged
@@ -1035,7 +1035,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1072,7 +1072,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3361731684064827668
+--- !u!64 &5204115812593120909
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 4928305699679444738}
   - component: {fileID: 6657283440850240882}
   - component: {fileID: 4201166607720495247}
-  - component: {fileID: 2315934668700962337}
+  - component: {fileID: 31695652186702956}
   m_Layer: 0
   m_Name: Group_025
   m_TagString: Untagged
@@ -1147,7 +1147,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1181,7 +1181,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2315934668700962337
+--- !u!64 &31695652186702956
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1214,7 +1214,7 @@ GameObject:
   - component: {fileID: 720362000071681975}
   - component: {fileID: 8612569072132285776}
   - component: {fileID: 1106244648507783945}
-  - component: {fileID: 2885256977631603297}
+  - component: {fileID: 1128151322010378021}
   m_Layer: 0
   m_Name: Group_011
   m_TagString: Untagged
@@ -1256,7 +1256,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1290,7 +1290,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2885256977631603297
+--- !u!64 &1128151322010378021
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1323,7 +1323,7 @@ GameObject:
   - component: {fileID: 7804296511497672821}
   - component: {fileID: 2206127729725033641}
   - component: {fileID: 7287788363896195379}
-  - component: {fileID: 8561046555790324152}
+  - component: {fileID: 2033052939124710375}
   m_Layer: 0
   m_Name: Group_038
   m_TagString: Untagged
@@ -1365,7 +1365,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1399,7 +1399,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8561046555790324152
+--- !u!64 &2033052939124710375
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1432,7 +1432,7 @@ GameObject:
   - component: {fileID: 6928238141573830717}
   - component: {fileID: 8280227849263687584}
   - component: {fileID: 4401627167512557917}
-  - component: {fileID: 6498324860560923471}
+  - component: {fileID: 4913656759421903342}
   m_Layer: 0
   m_Name: "Clockwise\xAE_001"
   m_TagString: Untagged
@@ -1474,7 +1474,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1508,7 +1508,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6498324860560923471
+--- !u!64 &4913656759421903342
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 7075518460533001038}
   - component: {fileID: 6136004492096012882}
   - component: {fileID: 2708265500019175628}
-  - component: {fileID: 7949366089938749342}
+  - component: {fileID: 1822721686340307100}
   m_Layer: 0
   m_Name: "Clockwise\xAE_002"
   m_TagString: Untagged
@@ -1583,7 +1583,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1617,7 +1617,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7949366089938749342
+--- !u!64 &1822721686340307100
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1650,7 +1650,7 @@ GameObject:
   - component: {fileID: 6548378726664888580}
   - component: {fileID: 2383044624001869516}
   - component: {fileID: 9119865277857546047}
-  - component: {fileID: 3547634364715346300}
+  - component: {fileID: 7620864927186717512}
   m_Layer: 0
   m_Name: Group_031
   m_TagString: Untagged
@@ -1692,7 +1692,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1726,7 +1726,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3547634364715346300
+--- !u!64 &7620864927186717512
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1759,7 +1759,7 @@ GameObject:
   - component: {fileID: 8562167075465743544}
   - component: {fileID: 9130021208185153212}
   - component: {fileID: 8906215022601766053}
-  - component: {fileID: 553653917294933880}
+  - component: {fileID: 5737178047863013455}
   m_Layer: 0
   m_Name: Group_008
   m_TagString: Untagged
@@ -1801,7 +1801,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1835,7 +1835,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &553653917294933880
+--- !u!64 &5737178047863013455
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1868,7 +1868,7 @@ GameObject:
   - component: {fileID: 4828561077118302457}
   - component: {fileID: 3870406425175234482}
   - component: {fileID: 5037782754930178623}
-  - component: {fileID: 6944334474917296263}
+  - component: {fileID: 1121971289909327783}
   m_Layer: 0
   m_Name: Group_014
   m_TagString: Untagged
@@ -1910,7 +1910,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1947,7 +1947,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6944334474917296263
+--- !u!64 &1121971289909327783
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1980,7 +1980,7 @@ GameObject:
   - component: {fileID: 8290612631535036643}
   - component: {fileID: 7911564076663511704}
   - component: {fileID: 8315806228508690208}
-  - component: {fileID: 5304954592576832304}
+  - component: {fileID: 1660008483588332263}
   m_Layer: 0
   m_Name: Group_010
   m_TagString: Untagged
@@ -2022,7 +2022,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2056,7 +2056,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5304954592576832304
+--- !u!64 &1660008483588332263
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2089,7 +2089,7 @@ GameObject:
   - component: {fileID: 1950899198105075822}
   - component: {fileID: 2449863633874057444}
   - component: {fileID: 1914411907768492680}
-  - component: {fileID: 353337136876052290}
+  - component: {fileID: 1319737208527524965}
   m_Layer: 0
   m_Name: Group_035
   m_TagString: Untagged
@@ -2131,7 +2131,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2165,7 +2165,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &353337136876052290
+--- !u!64 &1319737208527524965
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2198,7 +2198,7 @@ GameObject:
   - component: {fileID: 4103732407895594525}
   - component: {fileID: 7456346220086131888}
   - component: {fileID: 5663694871220959643}
-  - component: {fileID: 6113708151665071303}
+  - component: {fileID: 8800402256514296292}
   m_Layer: 0
   m_Name: Group_026
   m_TagString: Untagged
@@ -2240,7 +2240,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2274,7 +2274,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6113708151665071303
+--- !u!64 &8800402256514296292
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2307,7 +2307,7 @@ GameObject:
   - component: {fileID: 4636140103106968544}
   - component: {fileID: 8153513827061296101}
   - component: {fileID: 7000462977069386703}
-  - component: {fileID: 5287674626806524808}
+  - component: {fileID: 8749617964356112818}
   m_Layer: 0
   m_Name: Kraft Furniture _001
   m_TagString: Untagged
@@ -2349,7 +2349,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2383,7 +2383,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5287674626806524808
+--- !u!64 &8749617964356112818
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2416,7 +2416,7 @@ GameObject:
   - component: {fileID: 3799852747200765136}
   - component: {fileID: 9056276750686781509}
   - component: {fileID: 4877353889795219384}
-  - component: {fileID: 8715001224572886134}
+  - component: {fileID: 1488425943227943176}
   m_Layer: 0
   m_Name: Group_034
   m_TagString: Untagged
@@ -2458,7 +2458,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2492,7 +2492,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8715001224572886134
+--- !u!64 &1488425943227943176
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2525,7 +2525,7 @@ GameObject:
   - component: {fileID: 2623543586060810746}
   - component: {fileID: 2309049087321014984}
   - component: {fileID: 1161045305071974370}
-  - component: {fileID: 7848987008462366599}
+  - component: {fileID: 7782040190841686466}
   m_Layer: 0
   m_Name: Group_016
   m_TagString: Untagged
@@ -2567,7 +2567,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2602,7 +2602,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7848987008462366599
+--- !u!64 &7782040190841686466
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2667,7 +2667,7 @@ GameObject:
   - component: {fileID: 9005980576636542491}
   - component: {fileID: 3888387633309753700}
   - component: {fileID: 2814662258625344962}
-  - component: {fileID: 6292256917800086804}
+  - component: {fileID: 2788351514880414477}
   m_Layer: 0
   m_Name: Group_003
   m_TagString: Untagged
@@ -2709,7 +2709,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2743,7 +2743,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6292256917800086804
+--- !u!64 &2788351514880414477
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2776,7 +2776,7 @@ GameObject:
   - component: {fileID: 256409210100123390}
   - component: {fileID: 1662827292914935017}
   - component: {fileID: 1493123093287642611}
-  - component: {fileID: 3147748222102722141}
+  - component: {fileID: 755348030312409276}
   m_Layer: 0
   m_Name: Kraft Furniture #1_002
   m_TagString: Untagged
@@ -2818,7 +2818,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2852,7 +2852,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3147748222102722141
+--- !u!64 &755348030312409276
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2885,7 +2885,7 @@ GameObject:
   - component: {fileID: 6128447341111770752}
   - component: {fileID: 7987061379983000070}
   - component: {fileID: 8894965300847719452}
-  - component: {fileID: 5862982279169553271}
+  - component: {fileID: 8214483838768583393}
   m_Layer: 0
   m_Name: Group_039
   m_TagString: Untagged
@@ -2927,7 +2927,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2961,7 +2961,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5862982279169553271
+--- !u!64 &8214483838768583393
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2994,7 +2994,7 @@ GameObject:
   - component: {fileID: 8292520343155286621}
   - component: {fileID: 378746120244145735}
   - component: {fileID: 6491862804694958336}
-  - component: {fileID: 806899610405153726}
+  - component: {fileID: 3045927811100054905}
   m_Layer: 0
   m_Name: Group_012
   m_TagString: Untagged
@@ -3036,7 +3036,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3070,7 +3070,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &806899610405153726
+--- !u!64 &3045927811100054905
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3103,7 +3103,7 @@ GameObject:
   - component: {fileID: 2336730778879835102}
   - component: {fileID: 3632932042437908728}
   - component: {fileID: 8052691241612479965}
-  - component: {fileID: 3050214928607666634}
+  - component: {fileID: 9085236422769357372}
   m_Layer: 0
   m_Name: Group_004
   m_TagString: Untagged
@@ -3145,7 +3145,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3182,7 +3182,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3050214928607666634
+--- !u!64 &9085236422769357372
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3215,7 +3215,7 @@ GameObject:
   - component: {fileID: 4594669188855084605}
   - component: {fileID: 5285277332490836605}
   - component: {fileID: 2821664326790658402}
-  - component: {fileID: 6873394769758256533}
+  - component: {fileID: 4083050157492064927}
   m_Layer: 0
   m_Name: Group_006
   m_TagString: Untagged
@@ -3257,7 +3257,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3292,7 +3292,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6873394769758256533
+--- !u!64 &4083050157492064927
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3325,7 +3325,7 @@ GameObject:
   - component: {fileID: 234890777605550803}
   - component: {fileID: 3035176574142923263}
   - component: {fileID: 3074954747127652186}
-  - component: {fileID: 3086009922304296709}
+  - component: {fileID: 154950841281852752}
   m_Layer: 0
   m_Name: Group_021
   m_TagString: Untagged
@@ -3367,7 +3367,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3401,7 +3401,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3086009922304296709
+--- !u!64 &154950841281852752
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3434,7 +3434,7 @@ GameObject:
   - component: {fileID: 7132783299436996448}
   - component: {fileID: 6116419951609665129}
   - component: {fileID: 4877481774177099865}
-  - component: {fileID: 1991497028959566308}
+  - component: {fileID: 7708616225574421722}
   m_Layer: 0
   m_Name: Group_020
   m_TagString: Untagged
@@ -3476,7 +3476,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3510,7 +3510,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1991497028959566308
+--- !u!64 &7708616225574421722
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3543,7 +3543,7 @@ GameObject:
   - component: {fileID: 1161143557360373687}
   - component: {fileID: 2147978987791580138}
   - component: {fileID: 8997172667373175557}
-  - component: {fileID: 3308406678467967613}
+  - component: {fileID: 5796921086204771926}
   m_Layer: 0
   m_Name: Group_018
   m_TagString: Untagged
@@ -3585,7 +3585,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3619,7 +3619,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3308406678467967613
+--- !u!64 &5796921086204771926
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3652,7 +3652,7 @@ GameObject:
   - component: {fileID: 7558974046894291009}
   - component: {fileID: 2714209990944426652}
   - component: {fileID: 7735893020548742496}
-  - component: {fileID: 5409911048657587908}
+  - component: {fileID: 6644541200615622598}
   m_Layer: 0
   m_Name: Kraft Furniture #1_001
   m_TagString: Untagged
@@ -3694,7 +3694,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3728,7 +3728,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5409911048657587908
+--- !u!64 &6644541200615622598
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3828,7 +3828,7 @@ GameObject:
   - component: {fileID: 7399162947496804533}
   - component: {fileID: 4657940592474329949}
   - component: {fileID: 5849464980156813318}
-  - component: {fileID: 8186950416396100765}
+  - component: {fileID: 5024152090631232630}
   m_Layer: 0
   m_Name: Group_002
   m_TagString: Untagged
@@ -3870,7 +3870,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3904,7 +3904,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8186950416396100765
+--- !u!64 &5024152090631232630
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3937,7 +3937,7 @@ GameObject:
   - component: {fileID: 8451652684955514631}
   - component: {fileID: 104540154532065917}
   - component: {fileID: 2370604649729445242}
-  - component: {fileID: 6631374149313136548}
+  - component: {fileID: 8714633588255934687}
   m_Layer: 0
   m_Name: Group_013
   m_TagString: Untagged
@@ -3979,7 +3979,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4013,7 +4013,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6631374149313136548
+--- !u!64 &8714633588255934687
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
