@@ -7,6 +7,7 @@ public class PickupInteractable : MonoBehaviour, IInteractable
     [SerializeField] private bool isTheLuggage = false;
     private PlayerInteractionComponent _playerInteractionComponent;
     private Rigidbody _rb;
+    public Color mainColor;
 
     private void Start()
     {
@@ -15,8 +16,8 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         _rb.useGravity = usingPhysics;
         _rb.isKinematic = !usingPhysics;
         Renderer rend = GetComponent<Renderer>();
-        Color color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-        rend.material.color = color;
+        mainColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        rend.material.color = mainColor;
     }
 
     public void Interact()
