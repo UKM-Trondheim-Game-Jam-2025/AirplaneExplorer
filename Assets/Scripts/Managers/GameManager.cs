@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchSceneToLoseScene()
     {
-        SceneManager.LoadScene("LoseScene");
+        SceneManager.LoadScene("3_EndCutscene");
     }
 
     public void RestartGame()

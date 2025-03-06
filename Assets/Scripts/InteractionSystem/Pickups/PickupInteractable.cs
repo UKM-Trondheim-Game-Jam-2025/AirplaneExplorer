@@ -1,7 +1,11 @@
+using Eflatun.SceneReference;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickupInteractable : MonoBehaviour, IInteractable
 {
+    [SerializeField] SceneReference EndCutscene;
+    
     [Header("Pickup Settings")]
     [SerializeField] private bool usingPhysics = false;
     [SerializeField] private bool isTheLuggage = false;
@@ -77,5 +81,6 @@ public class PickupInteractable : MonoBehaviour, IInteractable
     {
         Debug.Log("Won the game");
         // switch Scene or simply play winning cutscene
+        SceneManager.LoadScene(EndCutscene.Name);
     }
 }

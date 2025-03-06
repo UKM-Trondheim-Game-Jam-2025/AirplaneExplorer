@@ -1,9 +1,11 @@
 using System.Collections;
+using Eflatun.SceneReference;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Gun : MonoBehaviour, IInteractable
 {
+    public SceneReference EndScene;
     [Header("Gun Settings")]
     private Camera playerCamera;
     [SerializeField] private float fireRange;

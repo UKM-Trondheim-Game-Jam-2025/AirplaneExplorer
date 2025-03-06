@@ -149,5 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06be1e3344690044958f3df0289907d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndCutscene:
+    asset: {fileID: 102900000, guid: f89ebd9d1b5e76b458c3ef9867f1164d, type: 3}
+    guid: f89ebd9d1b5e76b458c3ef9867f1164d
   usingPhysics: 0
   isTheLuggage: 0
+  mainColor: {r: 0, g: 0, b: 0, a: 0}
