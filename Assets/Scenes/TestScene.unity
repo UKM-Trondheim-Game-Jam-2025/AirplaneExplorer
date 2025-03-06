@@ -2478,7 +2478,7 @@ MonoBehaviour:
       Owner: {fileID: 2007511611}
       Enabled: 1
       Input:
-        InputAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+        InputAction: {fileID: 0}
         Gain: 1
         LegacyInput: 
         LegacyGain: 1
@@ -2716,6 +2716,14 @@ PrefabInstance:
     - target: {fileID: 4885725948496750835, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411847512488693884, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226718270744046525, guid: b7bf51a550afc7045b82c767d6cdf579, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
