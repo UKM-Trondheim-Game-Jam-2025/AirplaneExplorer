@@ -77,11 +77,11 @@ public class DataPersistanceManager : MonoBehaviour
             NewGame();
         }
 
-        if (gameData.gameLost)
-        {
-            NewGame();
-            return;
-        }
+        //if (gameData.gameLost)
+        //{
+        //    NewGame();
+        //    return;
+        //}
 
         if (gameData == null)
         {
