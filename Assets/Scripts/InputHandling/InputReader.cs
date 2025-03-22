@@ -95,8 +95,8 @@ namespace InputHandling
         // Public methods for external components to request input mode changes
         public void RequestUIMode()
         {
-            if (!IsPaused)
-                SwitchToUIControls();
+            //if (!IsPaused)
+            //    SwitchToUIControls();
         }
 
         public void RequestPlayerMode()
@@ -105,13 +105,13 @@ namespace InputHandling
                 SwitchToPlayerControls();
         }
 
-        void SwitchToUIControls()
-        {
-            IsPaused = true;
-            m_InputActions.Player.Disable();
-            m_InputActions.UI.Enable();
-            PauseEvent?.Invoke(true);
-        }
+        // void SwitchToUIControls()
+        // {
+        //     IsPaused = true;
+        //     m_InputActions.Player.Disable();
+        //     m_InputActions.UI.Enable();
+        //     PauseEvent?.Invoke(true);
+        // }
 
         void SwitchToPlayerControls()
         {
@@ -151,13 +151,13 @@ namespace InputHandling
             //noop
         }
 
-        public void OnPause(InputAction.CallbackContext context)
-        {
-            if (!IsPaused)
-                SwitchToUIControls();
-            else
-                SwitchToPlayerControls();
-        }
+        //public void OnPause(InputAction.CallbackContext context)
+        //{
+        //    if (!IsPaused)
+        //        SwitchToUIControls();
+        //    else
+        //        SwitchToPlayerControls();
+        //}
 
         public void OnSprint(InputAction.CallbackContext context)
         {
